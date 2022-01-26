@@ -1,0 +1,41 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+main.Position = UDim2.new(0.0792492181, 0, 0.500813007, 0)
+main.Size = UDim2.new(0, 330, 0, 176)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+TextLabel.BorderColor3 = Color3.fromRGB(68, 68, 68)
+TextLabel.Size = UDim2.new(0, 330, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "BEDWARS SCRIPT | MADE BY MASTERCACING10"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0, 0, 0.284090906, 0)
+TextButton.Size = UDim2.new(0, 330, 0, 126)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "OPEN SCRIPT"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
